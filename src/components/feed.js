@@ -10,6 +10,10 @@ export default function Feed(){
  return (
     <div>
         <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
+        <Tweet />
     </div>
  )
 }
