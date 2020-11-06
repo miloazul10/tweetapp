@@ -17,12 +17,13 @@ const Sidebar = (props) => {
         <div className="t-sidebar">
             <Logo/>
             <div className="t-icon-container">
-                <Icon source={< HomeSolid />}/>
-                <Icon source={< HashtagOutline />}/>
-                <Icon source={< BellOutline />}/>
-                <Icon source={< MailOutline />}/>
-                <Icon source={< UserOutline />}/>
-                <Icon source={< DotsCircleHorizontalOutline />}/>
+                {
+                    props.iconList.map( icon => {
+                        return (
+                            <Icon source={icon} />
+                        )
+                    })
+                }
             </div>
             <Account profileUrl={props.profileUrl}/>
         </div>
