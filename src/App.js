@@ -4,6 +4,8 @@ import './styles.css';
 
 import Navbar from './components/navbar';
 import Feed from './components/feed';
+import Sidebar from './components/sidebar/sidebar';
+import Main from './components/main/main';
 
 class App extends React.Component {
 
@@ -36,10 +38,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <Navbar />
-        <h1>Hello world</h1>
-        <h2>Probando el hot reload 🍿</h2>
-        <Feed datos={this.state} mostrar={this.mostrar} ocultar={this.ocultar} />
+        <Sidebar iconList profileUrl={this.state.profile} />
+        {/* <Feed datos={this.state} mostrar={this.mostrar} ocultar={this.ocultar} /> */}
+        <Main profileUrl={this.state.profile} />
       </div>
     );
   }

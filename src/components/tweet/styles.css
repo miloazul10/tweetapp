@@ -1,7 +1,8 @@
 .tweet-container{
     display: flex;
     flex-direction: column;   
-    width: 50%;
+    width: 100%;
+    padding: 0em 1em;
     margin: 0 auto;
 }
 
