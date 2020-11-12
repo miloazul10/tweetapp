@@ -12,14 +12,6 @@ class Feed extends React.Component {
 
     render() {
 
-        const {profile, profileName, username, content, display} = {
-            profile: "",
-            profileName: "",
-            username: "",
-            content: "",
-            display: ""
-        };
-
         return (
             <div>
                 {
@@ -27,9 +19,11 @@ class Feed extends React.Component {
                         return (
                             <Tweet
                                 profile={tweet.profile}
-                                profileUrl={profileName}
+                                profileUrl={tweet.profileUrl}
                                 username={tweet.username}
-                                content={tweet.content}/>
+                                content={tweet.content}
+                                reactions={tweet.interaction}
+                            />
                         )
                     })
                 }

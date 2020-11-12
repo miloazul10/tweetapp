@@ -15,14 +15,16 @@
 
 .t-main{
   display: flex;
+  height: 100vh;
 }
 
 .t-col-container{
   display: flex;
   flex-direction: column;
-  padding: 0em 1em;
   align-items: flex-start;
   width: 65%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .t-row{

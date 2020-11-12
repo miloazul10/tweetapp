@@ -1,9 +1,12 @@
 .tweet-container{
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     width: 100%;
-    padding: 0em 1em;
+    padding: 1em 1em;
     margin: 0 auto;
+    box-sizing: border-box;
+    border-bottom: solid 1px rgb(230, 236, 240);
+    position: relative;
 }
 
 .row {
@@ -32,7 +35,87 @@
 }
 
 .row>.content{
-    font-weight: bold;
     font-size: 1.3em;
     text-align: left;
+}
+
+.reactions{
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    margin: 0 auto;
+}
+
+.reactions svg{
+    width: 1.5em;
+}
+
+.content-container{
+    width: 82%;
+    margin: 0 auto;
+}
+
+.reactions>.comments, .reactions>.likes, .reactions>.retweets{
+    display: flex;
+    align-items: center;
+    width: 12%;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.reactions>.comments:hover svg, .reactions>.likes:hover svg, .reactions>.retweets:hover svg{
+    stroke: rgb(29, 161, 242);
+}
+
+.tweet-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2vw;
+    width: 2vw;
+    position: absolute;
+    top: 9%;
+    right: 2%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tweet-options-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.tweet-options:hover{
+    transition: .5s all;
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+.tweet-options:hover>svg{
+    stroke: rgb(29, 161, 242);
+}
+
+.tweet-options>svg{
+    width: 65%;
+}
+
+.tweet-options-menu {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    width: 30%;
+    padding: 1em .5em;
+    background-color: #cecece;
+    box-shadow: 1px 1px 7px #7b7b7b;
+    border-radius: 4px;
+}
+
+.tweet-options-menu__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tweet-options-menu__row > svg{
+    width: 10%;
 }

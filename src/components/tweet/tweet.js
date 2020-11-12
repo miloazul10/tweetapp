@@ -1,10 +1,30 @@
 import React from 'react';
+import {HeartOutline, ShareOutline, ChatOutline, DotsHorizontalOutline, TrashOutline} from '@graywolfai/react-heroicons';
 import './styles.css';
 
 class Tweet extends React.Component{
+    
+    constructor(){
+        super();
+        this.state = {
+
+        }
+    }
+
     render(){
         return (
             <div className="tweet-container">
+
+                <div className="tweet-options-container">
+                    <div className="tweet-options">
+                        <DotsHorizontalOutline />
+                    </div>
+                    {/* <div className="tweet-options-menu">
+                        <div className="tweet-options-menu__row">
+                            <TrashOutline /><span>No me interesa este tweet</span>
+                        </div>
+                    </div> */}
+                </div>
                 <div className="row">
                     <div className="c1">
                         <img src={this.props.profileUrl} alt="profile" />
@@ -15,10 +35,24 @@ class Tweet extends React.Component{
                     </div>
                     <div className="c3"></div>
                 </div>
-                <div className="row">
+                <div className="row content-container">
                     <p className="content">                
                         {this.props.content}
                     </p>
+                </div>
+                <div className="reactions">
+                    <div className="comments">
+                        <ChatOutline />
+                        <span>{this.props.reactions.comments}</span>
+                    </div>
+                    <div className="retweets" onClick={this.handleClickRT}>
+                        <ShareOutline />
+                        <span>{this.props.reactions.retweets}</span>
+                    </div>
+                    <div className="likes" likes onClick={this.handleClickLike}>
+                        <HeartOutline />
+                        <span>{this.props.reactions.likes}</span>
+                    </div>
                 </div>
             </div>
         )
