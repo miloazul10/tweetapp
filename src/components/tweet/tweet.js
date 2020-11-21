@@ -30,7 +30,15 @@ class Tweet extends React.Component{
                         <h6>{this.props.profile}</h6>
                         <h6>{this.props.username}</h6>
                     </div>
-                    <div className="c3"></div>
+                    <div className="c3">
+                    {/* <p className="action" onClick={this.props.addReTweet?()=>this.props.removeReTweet(this.props.index)
+                            : ()=>this.props.adReTweet(this.props.index) }>
+                            {this.props.addReTweet?this.props.iconRetweetOn:this.props.iconRetweetOf}
+                        </p>
+                        <p>
+                            {this.props.retweets}
+                        </p> */}
+                    </div>
                 </div>
                 <div className="row content-container">
                     <p className="content">                
