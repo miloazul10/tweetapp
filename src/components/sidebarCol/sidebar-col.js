@@ -1,9 +1,13 @@
 import React from 'react';
 
+import SearchBar from '../searchBar/searchbar';
+import Trends from '../trends';
+
 const SidebarCol = (props) => {
     return (
         <div className="t-sidebar-col">
-            <button onClick={props.cambiarImagen}>Cambiar la imagen de perfil</button>
+            <SearchBar />
+            <Trends />
         </div>
     )
 }

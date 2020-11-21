@@ -42,7 +42,32 @@
   max-width: 100%;
 }
 
-.t-sidebar-col{
+/* .t-sidebar-col{
   border: 1px dashed #000;
   width: 35%;
+} */
+
+.t-sidebar-col {
+  border-right: solid 1px #cacaca;
+  border-left: solid 1px #cacaca;
+  width: 35%;
+}
+
+.t-sidebar-col > input {
+  border: 1px solid #ecedef;
+  background-color: #ecedef;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  padding: 5px;
+  margin-top: 14px;
+}
+
+.container-trends{
+  width: 80%;
+  background-color: #ecedef;
+  margin-left: 32px;
+  border-radius: 7px;
+  height: auto;
+  padding-bottom: 7px;
 }
