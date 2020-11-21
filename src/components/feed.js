@@ -7,7 +7,7 @@ class Feed extends React.Component {
     constructor() {
         super();
         this.state = {
-            // tweets: feed,
+            // NewTweet
             iconsFeed: [
                 <HeartSolid/>,
                 <HeartOutline/>,
