@@ -19,11 +19,11 @@ class Tweet extends React.Component{
                     <div className="tweet-options">
                         <DotsHorizontalOutline />
                     </div>
-                    {/* <div className="tweet-options-menu">
+                    <div className="tweet-options-menu">
                         <div className="tweet-options-menu__row">
                             <TrashOutline /><span>No me interesa este tweet</span>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
                 <div className="row">
                     <div className="c1">
