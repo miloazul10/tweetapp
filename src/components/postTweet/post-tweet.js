@@ -9,11 +9,11 @@ const PostTweet = (props) => {
                     <img src={props.profileUrl}  alt="profile" />
                 </div>
                 <form>
-                    <input placeholder="¿Qué está pasando?" />
-                    <div className="t-post-options">
-                        <button>Twittear</button>
-                    </div>
+                    <input placeholder="¿Qué está pasando?" onChange={props.handleInput} value={props.newContent}/>
                 </form>
+                <div className="t-post-options">
+                        <button onClick={props.addTweet}>Twittear</button>
+                </div>
                 
             </div>
         </div>
