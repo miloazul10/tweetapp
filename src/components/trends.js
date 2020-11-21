@@ -12,12 +12,6 @@ class Trends extends React.Component {
     }
     render() {
 
-        const {category, tittle, noTweets} = {
-            category: "",
-            tittle: "",
-            noTweets: "",
-        };
-
         return (
             <div className="container-trends">
                 <h3>Que esta pasando</h3>
