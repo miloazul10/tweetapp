@@ -1,5 +1,5 @@
 import React from 'react';
-import {HeartOutline, ShareOutline, ChatOutline, DotsHorizontalOutline} from '@graywolfai/react-heroicons';
+import { ChatOutline, DotsHorizontalOutline} from '@graywolfai/react-heroicons';
 import './styles.css';
 import ContextMenu from "../context-menu";
 
@@ -16,7 +16,7 @@ class Tweet extends React.Component{
         return (
             <div className="tweet-container">
 
-                <div className="tweet-options-container">
+                <div className="contextual-container">
                     <div className="tweet-options" onClick={()=>this.props.toggleContextMenuFn(this.props.index)}>
                         <DotsHorizontalOutline />
                     </div>
@@ -50,13 +50,23 @@ class Tweet extends React.Component{
                         <ChatOutline />
                         <span>{this.props.reactions.comments}</span>
                     </div>
-                    <div className="retweets" onClick={this.handleClickRT}>
-                        <ShareOutline />
-                        <span>{this.props.reactions.retweets}</span>
+                    <div className="retweets">
+                        <p className="action" onClick={this.props.addReTweet?()=>this.props.removeReTweet(this.props.index)
+                            : ()=>this.props.adReTweet(this.props.index) }>
+                            {this.props.addReTweet?this.props.iconRetweetOn:this.props.iconRetweetOf}
+                        </p>
+                        <p>
+                            {this.props.retweets}
+                        </p>
                     </div>
-                    <div className="likes" likes onClick={this.handleClickLike}>
-                        <HeartOutline />
-                        <span>{this.props.reactions.likes}</span>
+                    <div className="likes">
+                        <p className="action" onClick={this.props.addLike?()=>this.props.removeLike(this.props.index)
+                        : ()=>this.props.adLike(this.props.index)}>
+                            {this.props.addLike?this.props.iconLikeOn:this.props.iconLikeOf}
+                        </p>
+                        <p>
+                            {this.props.likes}
+                        </p>
                     </div>
                 </div>
             </div>
