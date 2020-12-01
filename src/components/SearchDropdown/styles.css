@@ -1,6 +1,7 @@
 .container {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .container--hover:hover {
   background-color: #1da1f2;

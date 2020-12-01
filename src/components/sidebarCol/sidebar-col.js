@@ -16,7 +16,7 @@ render() {
     return (
         <div className="t-sidebar-col">
             <SearchBar />
-            {/* <SearchDropdown /> */}
+            <SearchDropdown />
             <Trends />
         </div>
         );
